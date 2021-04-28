@@ -3,46 +3,35 @@
 {% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
-    <style>
-        .example-wrapper {
-            margin: 1em auto;
-            max-width: 800px;
-            width: 95%;
-            font: 18px/1.5 sans-serif;
-        }
+    <h3>Autocomplete test</h3>
 
-        .example-wrapper code {
-            background: #F5F5F5;
-            padding: 2px 6px;
-        }
-    </style>
+    <div
+            data-controller="autocomplete"
+            data-autocomplete-url-value="{{ path('test_autocomplete') }}"
+    >
+        <input type="text" data-autocomplete-target="input"/>
+        <input type="hidden" name="bird_id" data-autocomplete-target="hidden"/>
+        <ul class="list-group" data-autocomplete-target="results"></ul>
+    </div>
 
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
+    <h3>Clipboard test</h3>
 
-        {% if app.user %}
-            <h4>Hello <span class="alert alert-success">{{ app.user.username }}</span></h4>
-        {% else %}
-            <h4>
-                Use <code>symfony console user-admin</code> to create a user to <a href="{{ path('login') }}">log in</a>...
-            </h4>
-        {% endif %}
+    <div
+            data-controller="clipboard"
+            data-clipboard-success-content="Copied!"
+    >
+        <input
+                type="text"
+                value="Click the button to copy me!"
+                data-clipboard-target="source"
+        />
 
-        <h4>PHP Version: <code>{{ php_version }}</code></h4>
-
-        This friendly message is coming from:
-        <ul>
-            <li>Your controller at <code>
-                    <a href="{{ '/home/elkuku/repos/symfony-playground-one/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a>
-                </code>
-            </li>
-            <li>Your template at <code>
-                    <a href="{{ '/home/elkuku/repos/symfony-playground-one/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a>
-                </code>
-            </li>
-        </ul>
-
-        <div data-controller="hello" class="alert alert-success">Stimulus test</div>
-
+        <button
+                type="button"
+                data-action="clipboard#copy"
+                data-clipboard-target="button"
+        >
+            Copy to clipboard
+        </button>
     </div>
 {% endblock %}

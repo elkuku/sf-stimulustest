@@ -19,4 +19,15 @@ class DefaultController extends AbstractController
             ]
         );
     }
+
+    #[Route('/test-autocomplete', name: 'test_autocomplete', methods: ['GET'])]
+    public function testAutocomplete()
+    {
+        return new Response(
+            '<li class="list-group-item" role="option" data-autocomplete-value="1">Blackbird</li>
+<li class="list-group-item" role="option" data-autocomplete-value="2">Bluebird</li>
+<li class="list-group-item" role="option" data-autocomplete-value="3">Mockingbird</li>'
+        );
+
+    }
 }
