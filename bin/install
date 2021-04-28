@@ -29,6 +29,9 @@ yarn dev
 
 docker-compose up -d
 
+# wait for db to become available
+sleep 5
+
 symfony console doctrine:migrations:migrate -n
 
 symfony server:start -d
