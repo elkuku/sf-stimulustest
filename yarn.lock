@@ -6392,6 +6392,8 @@ fsevents@~2.3.1:
     popper.js: ^1.16.1
     regenerator-runtime: ^0.13.8
     stimulus: ^2.0.0
+    stimulus-autocomplete: ^2.0.1-phylor-6095f2a9
+    stimulus-clipboard: ^1.0.0
     stimulus-use: ^0.23.0
     sweetalert2: ^10.16.3
     webpack-notifier: ^1.13.0
@@ -6800,6 +6802,26 @@ fsevents@~2.3.1:
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: 57735269bf231176a60deb80f6d60214cb4a87663b0937e79497afe9aebe2597f8377fd28893f4d1776205f18dd0b927774a26b72051411ac5108e9e2dfc77d2
+  languageName: node
+  linkType: hard
+
+"stimulus-autocomplete@npm:^2.0.1-phylor-6095f2a9":
+  version: 2.0.1-rc.4
+  resolution: "stimulus-autocomplete@npm:2.0.1-rc.4"
+  dependencies:
+    lodash.debounce: ^4.0.8
+  peerDependencies:
+    stimulus: ">=2.0.0 <3"
+  checksum: 65c022322746461227adbd10854b77b08916e700d74bb242c238f5ff2d23d4439346d67c58c72cae32c7eb416999cfb95867722a90c535e59c0ee2a13898a2da
+  languageName: node
+  linkType: hard
+
+"stimulus-clipboard@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "stimulus-clipboard@npm:1.0.0"
+  dependencies:
+    stimulus: ^2.0.0
+  checksum: 03be569126b2d04def976dfe603cb50d9f2cb3cfdf4d82bf130652af4b29b31999fd52eafac155e6c72ed65e866f2822aeb07769f38e1e728f2de9558aed52d0
   languageName: node
   linkType: hard
 
